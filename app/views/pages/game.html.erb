@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <div class="container text-center">
+    <h2>What's your best shot ?</h2>
+    <%= @grid.join(" ") %>
+
+    <form action="/score">
+      <div class="form-group">
+        <!-- <label for="word">Your longest word: </label> -->
+        <input type="text" id="word" name="guess" placeholder="What is your longest word ?" class="form-control">
+        <input type="hidden" name="start_time" value="<%= @start_time %>" class="form-control">
+        <input type="hidden" name="grid" value="<%= @grid %>" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary">Go !!</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<h1>Your score</h1>
+
+<ol>
+  <li>Your word: <%= @guess%></li>
+  <li>Time taken to answer: <%= @result[:time]%></li>
+  <li>Traduction: <%= @result[:traduction]%></li>
+  <li>Your score: <%= @result[:score].round%></li>
+  <li>Message: <%= @result[:message]%></li>
+</ol>
+
+<h2>Your previous score: <%= session[:score] %></h2>
+
+<%= link_to "Play again", game_path %>
